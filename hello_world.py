@@ -11,7 +11,7 @@ st.title("Hello World")
 color = st.color_picker("Pick A Color", "#00f900")
 st.write("The current color is", color)
 st.header("This is a header with a divider", divider="green")
-chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
+chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["CAT", "DAG", "PET"])
 
 st.line_chart(chart_data)
 # Initialize the counter in session state
