@@ -5,7 +5,7 @@ import numpy as np
 
 import pydeck as pdk
 
-st.title("Hello World 123")
+st.title("Hello World")
 
 
 color = st.color_picker("Pick A Color", "#00f900")
