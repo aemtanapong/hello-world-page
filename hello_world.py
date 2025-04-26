@@ -2,16 +2,18 @@ import streamlit as st
 import plotly.express as px
 import pandas as pd
 import numpy as np
+
 import pydeck as pdk
 
 st.title("Hello World 123")
 
-st.header("This is a header with a divider", divider="gray")
-st.header("These headers have rotating dividers", divider=True)
-st.header("One", divider=True)
-st.header("Two", divider=True)
-st.header("Three", divider=True)
-st.header("Four", divider=True)
+
+color = st.color_picker("Pick A Color", "#00f900")
+st.write("The current color is", color)
+st.header("This is a header with a divider", divider="green")
+chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
+
+st.line_chart(chart_data)
 # Initialize the counter in session state
 if "count" not in st.session_state:
     st.session_state.count = 0
