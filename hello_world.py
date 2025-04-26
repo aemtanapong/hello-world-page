@@ -6,6 +6,17 @@ import pydeck as pdk
 
 st.title("Hello World")
 
+
+# Initialize the counter in session state
+if "count" not in st.session_state:
+    st.session_state.count = 0
+
+# Button that increments the counter
+if st.button("Click me"):
+    st.session_state.count += 1
+
+# Show the count
+st.write(f"Button clicked {st.session_state.count} times.")
 chart_data = pd.DataFrame(
     np.random.randn(1000, 2) / [50, 50] + [37.76, -122.4],
     columns=["lat", "lon"],
